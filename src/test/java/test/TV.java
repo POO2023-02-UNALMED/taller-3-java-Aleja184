@@ -20,6 +20,7 @@ public class TV {
 	public TV(Marca marca,boolean estado) {
 		this.marca = marca;
 		this.estado = estado;
+		TV.numTV++;
 	}
 
 	public Marca getMarca() {
@@ -35,7 +36,9 @@ public class TV {
 	}
 
 	public void setCanal(int canal) {
-		this.canal = canal;
+		if(canal>=1 && canal<=120 && estado== true) {
+			this.canal = canal;
+		}
 	}
 
 	public int getPrecio() {
@@ -51,7 +54,9 @@ public class TV {
 	}
 
 	public void setVolumen(int volumen) {
-		this.volumen = volumen;
+		if(volumen>=0 && volumen<=7 && estado== true) {
+			this.volumen = volumen;
+		}
 	}
 
 	public Control getControl() {
@@ -64,6 +69,8 @@ public class TV {
 	
 	public void turnOn(){
 		this.estado = true;
+		this.canal=1;
+		this.volumen=1;
 	}
 	
 	public void turnOff() {
