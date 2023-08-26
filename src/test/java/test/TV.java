@@ -11,7 +11,7 @@ public class TV {
 		
 
 	public static int getNumTV() {
-		return this.numTV;
+		return TV.numTV;
 	}
 	public static void setNumTV(int numTV) {
 		TV.numTV = numTV;
