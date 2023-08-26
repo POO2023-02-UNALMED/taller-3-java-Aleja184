@@ -10,7 +10,7 @@ public class TV {
 	private static int numTV;
 		
 
-	public static void getNumTV() {
+	public static int getNumTV() {
 		return this.numTV;
 	}
 	public static void setNumTV(int numTV) {
